@@ -74,8 +74,8 @@ portfolio-eng-dados/
 
 ### Pré-requisitos
 
-- **Node.js** (versão 18+)
-- **npm** ou **yarn**
+- **Node.js** (versão 20+)
+- **npm** (versão 10+)
 
 ### Instalação
 
