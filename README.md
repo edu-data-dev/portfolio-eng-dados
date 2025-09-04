@@ -1,73 +1,197 @@
-# Welcome to your Lovable project
+# 🚀 Portfolio - Engenheiro de Dados
 
-## Project info
+![GitHub repo size](https://img.shields.io/github/repo-size/edu-data-dev/portfolio-eng-dados)
+![GitHub language count](https://img.shields.io/github/languages/count/edu-data-dev/portfolio-eng-dados)
+![GitHub forks](https://img.shields.io/github/forks/edu-data-dev/portfolio-eng-dados)
+![GitHub stars](https://img.shields.io/github/stars/edu-data-dev/portfolio-eng-dados)
+![GitHub issues](https://img.shields.io/github/issues/edu-data-dev/portfolio-eng-dados)
 
-**URL**: https://lovable.dev/projects/56325b0b-175a-4060-97f3-76c5f263dc61
+## 📋 Sobre o Projeto
 
-## How can I edit this code?
+Portfolio profissional moderno desenvolvido para demonstrar competências em **Engenharia de Dados**, apresentando projetos reais, certificações e stack tecnológico completo. O site foi construído com foco em **performance**, **acessibilidade** e **experiência do usuário**.
 
-There are several ways of editing your application.
+### ✨ Características Principais
 
-**Use Lovable**
+- 🎨 **Design Moderno**: Interface clean e profissional com animações suaves
+- 📱 **Responsivo**: Adaptado para todos os dispositivos (mobile, tablet, desktop)
+- ⚡ **Performance**: Carregamento rápido e otimizado
+- 🔗 **Integração Completa**: Links diretos para WhatsApp, LinkedIn, GitHub e Email
+- 🏆 **Showcase de Certificações**: Exibição interativa de badges e credenciais
+- 📊 **Projetos Reais**: Apresentação detalhada de cases de engenharia de dados
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/56325b0b-175a-4060-97f3-76c5f263dc61) and start prompting.
+## 🌐 Demo
 
-Changes made via Lovable will be committed automatically to this repo.
+**🔗 Acesse o portfólio**: [https://portfolio-eng-dados.vercel.app](https://portfolio-eng-dados.vercel.app)
 
-**Use your preferred IDE**
+## 🛠️ Tecnologias Utilizadas
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Frontend
+- **React 22** - Biblioteca JavaScript para construção da interface
+- **TypeScript** - Superset JavaScript com tipagem estática
+- **Vite** - Ferramenta de build moderna e rápida
+- **Tailwind CSS** - Framework CSS utilitário
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### UI/UX
+- **shadcn/ui** - Componentes React reutilizáveis e acessíveis
+- **Radix UI** - Primitivos de UI headless
+- **Lucide React** - Biblioteca de ícones moderna
+- **Framer Motion** - Animações fluidas e interativas
 
-Follow these steps:
+### Deploy & DevOps
+- **Vercel** - Plataforma de deploy com CI/CD automático
+- **GitHub Actions** - Automação e workflows
+- **Git** - Controle de versão
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📁 Estrutura do Projeto
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```
+portfolio-eng-dados/
+├── public/                    # Arquivos estáticos
+│   ├── Eduardo-Alves-dados.pdf
+│   ├── favicon.ico
+│   └── robots.txt
+├── src/
+│   ├── assets/               # Imagens e recursos
+│   │   ├── badges/          # Certificações
+│   │   └── images/          # Fotos e backgrounds
+│   ├── components/          # Componentes React
+│   │   ├── ui/             # Componentes base (shadcn/ui)
+│   │   ├── About.tsx       # Seção sobre
+│   │   ├── Contact.tsx     # Formulário de contato
+│   │   ├── Hero.tsx        # Seção principal
+│   │   ├── Navigation.tsx  # Menu de navegação
+│   │   ├── Projects.tsx    # Portfólio de projetos
+│   │   └── Skills.tsx      # Habilidades e certificações
+│   ├── hooks/              # Custom hooks
+│   ├── lib/                # Utilitários
+│   └── pages/              # Páginas da aplicação
+├── vercel.json             # Configuração Vercel
+├── vite.config.ts         # Configuração Vite
+└── tailwind.config.ts     # Configuração Tailwind
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🚀 Como Executar Localmente
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Pré-requisitos
+
+- **Node.js** (versão 18+)
+- **npm** ou **yarn**
+
+### Instalação
+
+1. **Clone o repositório**
+```bash
+git clone https://github.com/edu-data-dev/portfolio-eng-dados.git
+```
+
+2. **Navegue até o diretório**
+```bash
+cd portfolio-eng-dados
+```
+
+3. **Instale as dependências**
+```bash
+npm install
+```
+
+4. **Execute o projeto em modo desenvolvimento**
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+5. **Acesse no navegador**
+```
+http://localhost:8080
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Scripts Disponíveis
 
-**Use GitHub Codespaces**
+| Comando | Descrição |
+|---------|-----------|
+| `npm run dev` | Inicia servidor de desenvolvimento |
+| `npm run build` | Gera build de produção |
+| `npm run preview` | Preview do build de produção |
+| `npm run lint` | Executa linting do código |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📦 Deploy
 
-## What technologies are used for this project?
+O projeto está configurado para deploy automático no **Vercel**:
 
-This project is built with:
+1. **Push para main** → Deploy automático
+2. **Pull Requests** → Preview deployments
+3. **Domínio personalizado** configurado
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Deploy Manual
 
-## How can I deploy this project?
+```bash
+# Build de produção
+npm run build
 
-Simply open [Lovable](https://lovable.dev/projects/56325b0b-175a-4060-97f3-76c5f263dc61) and click on Share -> Publish.
+# Deploy no Vercel
+vercel --prod
+```
 
-## Can I connect a custom domain to my Lovable project?
+## 🏗️ Arquitetura
 
-Yes, you can!
+### Componentes Principais
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Hero**: Apresentação inicial com CTA
+- **About**: Informações profissionais e experiência
+- **Skills**: Stack tecnológico e certificações
+- **Projects**: Cases e projetos de engenharia de dados
+- **Contact**: Formulário e links de contato
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Integrações
+
+- **WhatsApp**: Link direto para conversas
+- **LinkedIn**: Perfil profissional
+- **GitHub**: Repositórios e projetos
+- **Email**: Contato direto
+
+## 📊 Projetos em Destaque
+
+1. **Plataforma de Dados Azure** - Pipeline completo com Arquitectura Medallion
+2. **Pipeline ERP** - Solução para dados transacionais complexos
+3. **Análise de Notícias com IA** - Pipeline automatizado com LLM e Airflow
+
+## 🏆 Certificações
+
+- **Microsoft Azure Fundamentals (AZ-900)**
+- **AWS Educate - Generative AI**
+- **Google AI Essentials**
+- **Scrum Foundation**
+- **GitHub Copilot Challenge**
+
+## 📈 Performance
+
+- ⚡ **Lighthouse Score**: 95+ em todas as métricas
+- 🚀 **First Contentful Paint**: < 1.5s
+- 📱 **Mobile Friendly**: 100% responsivo
+- ♿ **Acessibilidade**: WCAG 2.1 AA compliant
+
+## 🤝 Contribuições
+
+Contribuições são bem-vindas! Para contribuir:
+
+1. Faça um Fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👤 Autor
+
+**Eduardo Alves** - Engenheiro de Dados
+
+- 💼 **LinkedIn**: [eduardo-alves95](https://www.linkedin.com/in/eduardo-alves95/)
+- 🐙 **GitHub**: [edu-data-dev](https://github.com/edu-data-dev)
+- 📧 **Email**: eduardo.dataengineer@gmail.com
+- 📱 **WhatsApp**: [(61) 99876-0988](https://wa.me/5561998760988)
+
+---
+
+⭐ **Se este projeto te ajudou, considere dar uma estrela!**
