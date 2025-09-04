@@ -90,8 +90,8 @@ const About = () => {
         {/* Key Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { number: "3+", label: "Anos em Dados" },
-            { number: "10+", label: "Projetos Entregues" },
+            { number: "1+", label: "Anos em Dados" },
+            { number: "5+", label: "Projetos Construídos" },
             { number: "5+", label: "Tecnologias Cloud" },
             { number: "100%", label: "Foco em Qualidade" }
           ].map((stat, index) => (

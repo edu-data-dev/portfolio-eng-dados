@@ -1,5 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import azureBadge from "@/assets/azure-fundamentals-badge.png";
+import googleBadge from "@/assets/google-ai-essentials-badge.png";
+import awsBadge from "@/assets/aws-educate-generative-ai-badge.png";
+import scrumBadge from "@/assets/scrum-foundation-badge.png";
+import copilotBadge from "@/assets/github-copilot-challenge-badge.png";
 import { 
   Cloud, 
   Database, 
@@ -40,7 +45,7 @@ const Skills = () => {
       icon: <Code className="h-6 w-6" />,
       skills: [
         { name: "Python", level: "Advanced", color: "bg-yellow-500" },
-        { name: "Data Wrangling", level: "Advanced", color: "bg-yellow-600" },
+        { name: "Data Wrangling", level: "Intermediate", color: "bg-yellow-600" },
         { name: "Pandas & NumPy", level: "Advanced", color: "bg-amber-500" },
         { name: "API Integration", level: "Intermediate", color: "bg-orange-600" }
       ],
@@ -145,26 +150,40 @@ const Skills = () => {
             <p className="text-muted-foreground">Validação formal das minhas competências técnicas</p>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-8 items-center opacity-80">
-            <div className="text-center hover:opacity-100 transition-opacity">
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-lg flex items-center justify-center mb-2">
-                <span className="text-2xl font-bold text-blue-500">AZ</span>
+          <div className="flex flex-wrap justify-center gap-8 items-center">
+            <div className="flex flex-col items-center justify-center group cursor-pointer transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/25 w-36">
+              <div className="w-28 h-28 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-lg flex items-center justify-center mb-2 group-hover:from-blue-500/30 group-hover:to-blue-600/30 transition-all duration-300 group-hover:shadow-lg">
+                <img src={azureBadge} alt="Azure Fundamentals Badge" className="w-24 h-24 object-contain group-hover:scale-105 transition-transform duration-300" />
               </div>
-              <p className="text-sm font-medium">Azure Fundamentals</p>
+              <p className="text-sm font-medium text-center group-hover:text-blue-500 transition-colors duration-300">Azure Fundamentals</p>
             </div>
             
-            <div className="text-center hover:opacity-100 transition-opacity">
-              <div className="w-24 h-24 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mb-2">
-                <span className="text-2xl font-bold text-orange-500">AWS</span>
+            <div className="flex flex-col items-center justify-center group cursor-pointer transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-orange-500/25 w-36">
+              <div className="w-28 h-28 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mb-2 group-hover:from-orange-500/30 group-hover:to-red-500/30 transition-all duration-300 group-hover:shadow-lg">
+                <img src={awsBadge} alt="AWS Educate Generative AI Badge" className="w-24 h-24 object-contain group-hover:scale-105 transition-transform duration-300" />
               </div>
-              <p className="text-sm font-medium">Cloud Practitioner</p>
+              <p className="text-sm font-medium text-center group-hover:text-orange-500 transition-colors duration-300">AWS Generative AI</p>
+            </div>
+            
+            <div className="flex flex-col items-center justify-center group cursor-pointer transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-yellow-500/25 w-36">
+              <div className="w-28 h-28 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-lg flex items-center justify-center mb-2 group-hover:from-yellow-500/30 group-hover:to-yellow-600/30 transition-all duration-300 group-hover:shadow-lg">
+                <img src={scrumBadge} alt="Scrum Foundation Badge" className="w-24 h-24 object-contain group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <p className="text-sm font-medium text-center group-hover:text-yellow-500 transition-colors duration-300">Scrum Foundation</p>
             </div>
 
-            <div className="text-center hover:opacity-100 transition-opacity">
-              <div className="w-24 h-24 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-2">
-                <span className="text-2xl font-bold text-green-500">GCP</span>
+            <div className="flex flex-col items-center justify-center group cursor-pointer transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-green-500/25 w-36">
+              <div className="w-28 h-28 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-2 group-hover:from-green-500/30 group-hover:to-emerald-500/30 transition-all duration-300 group-hover:shadow-lg">
+                <img src={googleBadge} alt="Google AI Essentials Badge" className="w-24 h-24 object-contain group-hover:scale-105 transition-transform duration-300" />
               </div>
-              <p className="text-sm font-medium">AI Essentials</p>
+              <p className="text-sm font-medium text-center group-hover:text-green-500 transition-colors duration-300">AI Essentials</p>
+            </div>
+            
+            <div className="flex flex-col items-center justify-center group cursor-pointer transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-gray-500/25 w-36">
+              <div className="w-28 h-28 bg-gradient-to-br from-gray-500/20 to-gray-700/20 rounded-lg flex items-center justify-center mb-2 group-hover:from-gray-500/30 group-hover:to-gray-700/30 transition-all duration-300 group-hover:shadow-lg">
+                <img src={copilotBadge} alt="GitHub Copilot Challenge Badge" className="w-24 h-24 object-contain group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <p className="text-sm font-medium text-center group-hover:text-gray-600 transition-colors duration-300">GitHub Copilot </p>
             </div>
           </div>
         </div>

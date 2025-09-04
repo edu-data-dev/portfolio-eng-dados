@@ -60,7 +60,7 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button 
-              onClick={() => scrollToSection('#contact')}
+              onClick={() => window.open('https://wa.me/5561998760988', '_blank')}
               className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold px-6 transition-all duration-300 hover:scale-105"
             >
               Fale Comigo
@@ -91,7 +91,7 @@ const Navigation = () => {
               ))}
               <div className="px-4 pt-4">
                 <Button 
-                  onClick={() => scrollToSection('#contact')}
+                  onClick={() => window.open('https://wa.me/5561998760988', '_blank')}
                   className="w-full bg-primary hover:bg-primary-glow text-primary-foreground font-semibold"
                 >
                   Fale Comigo

@@ -6,49 +6,56 @@ import { ExternalLink, Github, Database, Brain, Workflow } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "ETL para Memória de Contexto de IA",
-      description: "Pipeline completa para alimentar sistemas de IA com dados contextuais estruturados, incluindo processamento de texto, vetorização e indexação para busca semântica.",
+      title: "Plataforma de Dados de E-commerce na Nuvem Azure ",
+      description: "Implementação de uma plataforma de dados moderna e ponta a ponta na nuvem Microsoft Azure, simulando um ambiente de e-commerce de larga escala. O projeto engloba desde a geração de dados sintéticos até a orquestração, transformação e visualização em dashboards interativos, seguindo as melhores práticas de mercado com a Arquitetura Medallion.",
       icon: <Brain className="h-6 w-6" />,
-      tags: ["Python", "Azure Data Factory", "Vector DB", "NLP", "Airflow"],
+      tags: ["Azure Data Factory", "Azure Databricks", "Azure Data Lake", "Azure Synapse Analytics", "Power BI", "PySpark", "SQL", "Python", "Arquitetura Medallion"],
       features: [
-        "Processamento de documentos em batch",
-        "Vetorização com embeddings",
-        "Pipeline de qualidade de dados",
-        "Monitoramento automatizado"
+        "Arquitetura Medallion (Bronze, Silver, Gold)",
+        "ETL/ELT com Orquestração em Nuvem",
+        "Processamento de Big Data com PySpark",
+        "Serving Layer com SQL Serverless",
+        "Dashboards Executivos em Power BI"
       ],
-      status: "Em Produção",
+      status: "Case ",
       statusColor: "bg-green-500",
-      gradient: "from-purple-500/20 to-blue-500/20"
+      gradient: "from-purple-500/20 to-blue-500/20",
+      githubUrl: "https://github.com/edu-data-dev/Azure-ecommerce-data-pipeline"
     },
     {
-      title: "Pipelines de Dados em Produção",
-      description: "Arquitetura completa de dados utilizando Medallion com camadas Bronze, Silver e Gold. Processamento de milhões de registros diários com alta disponibilidade.",
+      title: "Pipeline de Dados e Arquitetura para ERP",
+      description: "Solução completa para um desafio técnico de engenharia de dados, abordando a modelagem de dados transacionais complexos de um sistema ERP (JSON) e o design de uma arquitetura de ingestão escalável para um Data Lake, simulando um ambiente real de varejo (restaurantes).",
       icon: <Database className="h-6 w-6" />,
-      tags: ["Databricks", "Delta Lake", "Azure", "Spark", "SQL"],
+      tags: ["Python", "SQL", "ETL", "Data Modeling", "Data Lake", "SQLite", "JSON", "Arquitetura de Dados"],
       features: [
-        "Arquitetura Medallion (Bronze/Silver/Gold)",
-        "Processamento incremental",
-        "Data quality checks",
-        "Recuperação automática de falhas"
+        "Modelagem de Dados Relacional",
+        "Pipeline de Ingestão de Dados",
+        "Design de Arquitetura de Data Lake",
+        "Análise de Schema Drift"
       ],
-      status: "Produção",
+      status: "test desafio",
       statusColor: "bg-green-500",
-      gradient: "from-blue-500/20 to-teal-500/20"
+      gradient: "from-blue-500/20 to-teal-500/20",
+      githubUrl: "https://github.com/edu-data-dev/Desafio-dados-erp",
+      docsUrl: "https://trello.com/b/LhZDECUs/desafio-de-engenharia-de-dados-kanban-quadro-modelo"
     },
     {
-      title: "Orquestração Avançada com Airflow",
-      description: "Sistema de orquestração complexo gerenciando múltiplas fontes de dados, transformações e cargas. Inclui alertas inteligentes e recuperação automática.",
+      title: "Pipeline de Análise de Notícias com Orquestração e IA",
+      description: "Pipeline de dados ponta a ponta que automatiza a coleta de notícias do portal G1, enriquece os dados com análise de sentimento e categorização através de IA (LLM), e os estrutura para análise. O projeto é totalmente orquestrado com Apache Airflow e containerizado com Docker, seguindo a arquitetura Medallion (Bronze/Silver).",
       icon: <Workflow className="h-6 w-6" />,
-      tags: ["Apache Airflow", "Docker", "PostgreSQL", "Python", "Monitoring"],
+      tags: ["Python", "Apache Airflow", "Docker", "PostgreSQL", "OpenAI (LLM)", "Playwright", "ETL", "Web Scraping", "Arquitetura Medallion"],
       features: [
-        "DAG's dinâmicos e reutilizáveis",
-        "Paralelização otimizada",
-        "Alertas contextuais",
-        "Dashboard personalizado"
+        "Coleta de Dados Dinâmica",
+        "Orquestração Automatizada com Airflow",
+        "Enriquecimento de Dados com IA:",
+        "Infraestrutura como Código (IaC)",
+        "Arquitetura de Dados Medallion:"
       ],
       status: "Ativo",
       statusColor: "bg-blue-500",
-      gradient: "from-green-500/20 to-emerald-500/20"
+      gradient: "from-green-500/20 to-emerald-500/20",
+      githubUrl: "https://github.com/edu-data-dev/AirDataPipeline",
+      docsUrl: "https://trello.com/b/JTQZjq00/projeto-eng-dados01"
     }
   ];
 
@@ -123,7 +130,13 @@ const Projects = () => {
                     variant="outline" 
                     size="sm" 
                     className="flex-1 hover:bg-primary hover:text-primary-foreground"
-                    onClick={() => console.log('View on GitHub')}
+                    onClick={() => {
+                      if (project.githubUrl) {
+                        window.open(project.githubUrl, '_blank');
+                      } else {
+                        console.log('View on GitHub');
+                      }
+                    }}
                   >
                     <Github className="h-4 w-4 mr-2" />
                     GitHub
@@ -132,7 +145,13 @@ const Projects = () => {
                     variant="outline" 
                     size="sm" 
                     className="flex-1 hover:bg-primary hover:text-primary-foreground"
-                    onClick={() => console.log('View documentation')}
+                    onClick={() => {
+                      if (project.docsUrl) {
+                        window.open(project.docsUrl, '_blank');
+                      } else {
+                        console.log('View documentation');
+                      }
+                    }}
                   >
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Docs
@@ -149,7 +168,7 @@ const Projects = () => {
             variant="outline" 
             size="lg"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3"
-            onClick={() => console.log('View all projects on GitHub')}
+            onClick={() => window.open('https://github.com/edu-data-dev', '_blank')}
           >
             <Github className="h-5 w-5 mr-2" />
             Ver Todos os Projetos no GitHub

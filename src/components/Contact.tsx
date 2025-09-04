@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Linkedin, Github, Send, MapPin, Clock } from "lucide-react";
+import { Mail, Linkedin, Github, Send, MapPin, Clock, Phone } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -80,7 +80,7 @@ const Contact = () => {
                 <Button 
                   variant="outline" 
                   className="w-full justify-start hover:bg-blue-500 hover:text-white hover:border-blue-500"
-                  onClick={() => window.open('https://linkedin.com', '_blank')}
+                  onClick={() => window.open('https://www.linkedin.com/in/eduardo-alves95/', '_blank')}
                 >
                   <Linkedin className="h-4 w-4 mr-3" />
                   LinkedIn
@@ -88,7 +88,7 @@ const Contact = () => {
                 <Button 
                   variant="outline" 
                   className="w-full justify-start hover:bg-gray-800 hover:text-white hover:border-gray-800"
-                  onClick={() => window.open('https://github.com', '_blank')}
+                  onClick={() => window.open('https://github.com/edu-data-dev', '_blank')}
                 >
                   <Github className="h-4 w-4 mr-3" />
                   GitHub
@@ -96,10 +96,18 @@ const Contact = () => {
                 <Button 
                   variant="outline" 
                   className="w-full justify-start hover:bg-red-500 hover:text-white hover:border-red-500"
-                  onClick={() => window.open('mailto:contato@exemplo.com', '_blank')}
+                  onClick={() => window.open('mailto:eduardo.dataengineer@gmail.com', '_blank')}
                 >
                   <Mail className="h-4 w-4 mr-3" />
                   Email
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-start hover:bg-green-500 hover:text-white hover:border-green-500"
+                  onClick={() => window.open('https://wa.me/5561998760988', '_blank')}
+                >
+                  <Phone className="h-4 w-4 mr-3" />
+                  WhatsApp
                 </Button>
               </CardContent>
             </Card>

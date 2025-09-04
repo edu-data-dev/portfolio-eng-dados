@@ -8,10 +8,7 @@ const Hero = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const downloadCV = () => {
-    // This would trigger CV download
-    console.log('Downloading CV...');
-  };
+  // Removido o handler de downloadCV, pois o download será feito via <a download>
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -48,20 +45,20 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
             Arquitetura, qualidade e impacto real através de dados.
             <br className="hidden md:block" />
-            Transformando análise de testes em soluções de dados escaláveis.
+            Arquitetando qualidade e escalabilidade em cada fluxo de dados
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              onClick={downloadCV}
-              size="lg" 
-              className="bg-primary hover:bg-primary-glow text-primary-foreground px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover-lift"
-            >
-              <Download className="mr-2 h-5 w-5" />
-              Baixar CV
-            </Button>
-            
+            <a href="/Eduardo-Alves-dados.pdf" download>
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary-glow text-primary-foreground px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover-lift"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Baixar CV
+              </Button>
+            </a>
             <Button 
               onClick={scrollToAbout}
               variant="outline" 
