@@ -16,13 +16,62 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Mensagem enviada!",
-      description: "Obrigado pelo contato. Responderei em breve.",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      // Usando Formspree para envio de emails
+      const formspreeId = import.meta.env.VITE_FORMSPREE_ID || 'YOUR_FORM_ID';
+      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Mensagem enviada com sucesso!",
+          description: "Obrigado pelo contato. Responderei em breve.",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        // Tenta extrair mensagem detalhada do Formspree
+        let errorMsg = 'Erro ao enviar mensagem';
+        try {
+          const data = await response.json();
+          if (data && data.errors && Array.isArray(data.errors) && data.errors.length > 0) {
+            errorMsg = data.errors.map((err: any) => err.message).join(' ');
+          } else if (data && data.message) {
+            errorMsg = data.message;
+          }
+        } catch (jsonErr) {
+          // Se não conseguir extrair JSON, mantém mensagem padrão
+        }
+        toast({
+          title: "Erro ao enviar mensagem",
+          description: errorMsg + " Tente novamente ou entre em contato diretamente pelo WhatsApp.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: (error instanceof Error ? error.message : String(error)) + " Tente novamente ou entre em contato diretamente pelo WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -202,10 +251,11 @@ const Contact = () => {
 
                   <Button 
                     type="submit" 
-                    className="w-full bg-primary hover:bg-primary-glow text-primary-foreground font-semibold py-3 transition-all duration-300 hover:scale-105"
+                    disabled={isSubmitting}
+                    className="w-full bg-primary hover:bg-primary-glow text-primary-foreground font-semibold py-3 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send className="h-4 w-4 mr-2" />
-                    Enviar Mensagem
+                    {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
                   </Button>
                 </form>
               </CardContent>
