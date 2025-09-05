@@ -191,7 +191,3 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 - 🐙 **GitHub**: [edu-data-dev](https://github.com/edu-data-dev)
 - 📧 **Email**: eduardo.dataengineer@gmail.com
 - 📱 **WhatsApp**: [(61) 99876-0988](https://wa.me/5561998760988)
-
----
-
-⭐ **Se este projeto te ajudou, considere dar uma estrela!**
